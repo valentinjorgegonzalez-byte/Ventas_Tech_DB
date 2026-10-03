@@ -18,7 +18,7 @@ nombre_producto VARCHAR(100) NOT NULL,
 id_categoria INT,
 precio DECIMAL(10,2) NOT NULL,
 stock INT DEFAULT 0,
-activo TINYINT DEFAULT 1
+activo TINYINT DEFAULT 1,
 FOREIGN KEY (id_categoria) REFERENCES categorias(id_categoria));
 CREATE TABLE ventas(
 id_venta INT IDENTITY(1,1) PRIMARY KEY,
