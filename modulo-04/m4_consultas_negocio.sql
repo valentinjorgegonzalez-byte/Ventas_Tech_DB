@@ -45,7 +45,7 @@ CROSS JOIN
 (SELECT MONTH(fecha_venta) AS mes,
   SUM(cantidad * precio_unitario) AS total_mensual
 FROM ventas
-GROUP BY MONTH(fecha_venta)) AS meses
+GROUP BY MONTH(fecha_venta)) AS meses;
 
 
 -- El cliente 1 es el que más ha gastado, con un total de $2640.00.
