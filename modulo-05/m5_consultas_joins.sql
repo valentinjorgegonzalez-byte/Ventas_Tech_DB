@@ -13,7 +13,7 @@ INNER JOIN clientes
 INNER JOIN productos
        ON ventas.id_producto = productos.id_producto
 INNER JOIN categorias
-       ON productos.id_categoria = categorias.id_categoria
+       ON productos.id_categoria = categorias.id_categoria;
 
 --CONSULTA 2
 SELECT clientes.nombre,
@@ -22,7 +22,7 @@ SELECT clientes.nombre,
 FROM clientes
 LEFT JOIN ventas
        ON clientes.id_cliente = ventas.id_cliente
-WHERE ventas.id_venta IS NULL
+WHERE ventas.id_venta IS NULL;
 
 --CONSULTA 3
 SELECT productos.nombre_producto,
@@ -33,7 +33,7 @@ LEFT JOIN ventas
        ON productos.id_producto = ventas.id_producto
 LEFT JOIN categorias
        ON productos.id_categoria = categorias.id_categoria
-WHERE ventas.id_venta IS NULL
+WHERE ventas.id_venta IS NULL;
 
 
 --CONSULTA 4
@@ -51,5 +51,5 @@ cantidad * precio_unitario AS total,
 'Periodo 2' AS canal
 FROM ventas
 WHERE fecha_venta BETWEEN '2024-03-11' AND '2024-03-15') AS resultados
-GROUP BY canal
+GROUP BY canal;
 
